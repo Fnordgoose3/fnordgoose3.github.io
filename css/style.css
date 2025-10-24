@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(0, 8, 255);
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1{
+    background: lightgreen;
+    color: black;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    background-color: blueviolet;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+                
+            
+            
+           
+            
