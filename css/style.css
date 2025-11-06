@@ -1,25 +1,318 @@
+:root{
+  --bg: #0d0d0d;       /* fundo principal */
+  --bg-alt: #1a1a1a;   /* fundo alternativo para contraste */
+  --text: #e6e6e6;     /* cor principal do texto */
+  --muted: #9ca3af;    /* cinza mais claro para textos secundários */
+  --accent: #60a5fa;   /* azul suave para links e destaques */
+  --accent-hover: #3b82f6;
+  --gap: 1rem;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
 body{
-    background-color: rgb(0, 8, 255);
-    color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-h1{
-    background: lightgreen;
-    color: black;
-}
+
+/* Header fixo */
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    background-color: blueviolet;
-    top: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(20,20,20,0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #2b2b2b;
+  z-index: 1000;
 }
-                
-            
-            
-           
-            
+
+.container-header{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 0.8rem 1rem;
+}
+
+h1{
+  font-size: 1.05rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+nav { display: flex; align-items: center; gap: 0.5rem; }
+
+.menu-toggle{
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Lista do menu */
+.nav-list{
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a{
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.35rem 0.45rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.15s, transform 0.08s, color 0.15s;
+}
+
+.nav-list a:hover,
+.nav-list a:focus{
+  color: var(--accent);
+  background: rgba(255,255,255,0.05);
+  transform: translateY(-1px);
+}
+
+/* Espaço no topo pro header fixo */
+main {
+  padding-top: 78px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Sections */
+.section{
+  padding: 2.2rem 1rem;
+  border-bottom: 1px solid #1f2937;
+  background: var(--bg);
+}
+
+.hero{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Contato */
+.section ul{
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.section a{
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.section a:hover{
+  color: var(--accent-hover);
+}
+
+/* Footer */
+footer{
+  padding: 1.2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid #1f2937;
+  background: var(--bg-alt);
+}
+
+/* Responsividade */
+@media (max-width: 800px){
+  .nav-list { display: none; }
+  .menu-toggle { display: inline-block; }
+
+  .nav-list.open{
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 60px;
+    flex-direction: column;
+    background: var(--bg-alt);
+    border: 1px solid #2b2b2b;
+    padding: 0.75rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    border-radius: 8px;
+  }
+
+  main { padding-top: 92px; }
+}
+.contact-list li {
+  display: flex;
+  align-items: center;
+}
+
+.contact-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-list a:hover {
+  color: var(--accent-hover);
+}
+
+.contact-list i {
+  width: 18px;
+  height: 18px;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 2rem 1rem;
+}
+
+/* Foto sem formato fixo e com maior destaque */
+.profile-pic {
+  width: 340px;
+  height: auto;
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Texto ao lado da foto */
+.hero-text {
+  max-width: 480px;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.hero-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 800px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .profile-pic {
+    width: 180px;
+    box-shadow: none; /* remove sombra no mobile se quiser deixar mais limpo */
+  }
+
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+}
+/* ===== Sobre (About) ===== */
+.about-section .about-content {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.2rem 0;
+}
+
+.about-img {
+  width: 420px;        /* maior por padrão */
+  height: auto;
+  object-fit: contain; /* preserva proporção, bom para PNGs com transparência */
+  border-radius: 8px;  /* sutil, remove se preferir cantos retos */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  flex-shrink: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+/* texto e botão ao lado da imagem */
+.about-text {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-text h2 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.6rem;
+}
+
+.about-text p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* botão do currículo */
+.cv-btn {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.6rem 0.95rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.cv-btn:hover,
+.cv-btn:focus {
+  transform: translateY(-3px);
+  background: var(--accent-hover);
+  outline: none;
+}
+
+/* Responsividade: empilha e reduz imagem em telas pequenas */
+@media (max-width: 900px) {
+  .about-img {
+    width: 320px;
+  }
+  .about-text { max-width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    width: 260px;
+    box-shadow: none;
+  }
+
+  .about-text h2 { font-size: 1.3rem; }
+  .cv-btn { margin-left: auto; margin-right: auto; }
+}

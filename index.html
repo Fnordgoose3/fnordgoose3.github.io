@@ -1,23 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Machado</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Machado</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/js/lang.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Gabriel da Silva Machado</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#Portfolio">Portfólio</a></li>
-                <li><a href="#sobre">Sobre mim</a></li>
-                <li><a href="#contato">Contato</a></li>
+  <header>
+    <div class="container-header">
+      <h1>Gabriel da Silva Machado</h1>
+
+      <nav aria-label="Menu principal">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+          ☰
+        </button>
+            <ul id="main-nav" class="nav-list">
+                <li><a href="#home" data-pt="Início" data-en="Home" data-jp="ホーム">Início</a></li>
+                <li><a href="#portfolio" data-pt="Portfólio" data-en="Portfolio" data-jp="ポートフォリオ">Portfólio</a></li>
+                <li><a href="#sobre" data-pt="Sobre mim" data-en="About me" data-jp="自己紹介">Sobre mim</a></li>
+                <li><a href="#contato" data-pt="Contato" data-en="Contact" data-jp="連絡先">Contato</a></li>
             </ul>
-        </nav>
-    </header>
+      </nav>
+      <!-- 🔘 Botão de idioma -->
+      <button id="lang-btn" class="lang-btn" data-lang="pt">🌐 🇧🇷 PT</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="section hero">
+  <div class="hero-content">
+    <img src="/img/gabrielFoto.jpeg" alt="Foto de Gabriel Machado" class="profile-pic">
+    
+    <div class="hero-text">
+      <h2>Olá, eu sou o Gabriel 👋</h2>
+      <p>Sou apaixonado por tecnologia e criação de jogos.<br>
+      Atualmente estou focado em aprender programação e desenvolver meus próprios projetos.</p>
+    </div>
+  </div>
+</section>
+
+    <section id="portfolio" class="section">
+      <h2>Portfólio</h2>
+      <p>Aqui vão alguns projetos (jogos, sites e outros).</p>
+      <!-- Coloca cards ou listas de projetos aqui -->
+    </section>
+
+    <section id="sobre" class="section about-section">
+  <div class="about-content">
+    <!-- Imagem (à esquerda em desktop). Use uma foto sua apontando para a direita (PNG ok). -->
+    <img src="../img/foto-apontando.png" alt="Gabriel apontando para a direita" class="about-img">
+
+    <!-- Texto e botão (à direita em desktop) -->
+    <div class="about-text">
+      <h2>Sobre mim</h2>
+      <p>
+        Sou Gabriel Machado — estudante de programação e criador de jogos. 
+        Gosto de aprender fazendo e de transformar ideias em protótipos jogáveis.
+      </p>
+
+      <!-- Botão que abre o PDF do currículo -->
+      <a href="../files/cv-gabriel.pdf" class="cv-btn" target="_blank" rel="noopener noreferrer">Veja meu currículo aqui</a>
+    </div>
+  </div>
+</section>
+
+
+    <section id="contato" class="section">
+  <h2>Contato</h2>
+  <p>Entre em contato comigo:</p>
+  <ul class="contact-list">
+    <li>
+      <a href="mailto:Biel_machado08@hotmail.com">
+        <i data-lucide="mail"></i> E-mail
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/teu-usuario" target="_blank">
+        <i data-lucide="github"></i> GitHub
+      </a>
+    </li>
+    <li>
+      <a href="https://linkedin.com/in/teu-perfil" target="_blank">
+        <i data-lucide="linkedin"></i> LinkedIn
+      </a>
+    </li>
+    <li>
+      <a href="https://wa.me/5549991482378" target="_blank">
+        <i data-lucide="phone"></i> WhatsApp
+      </a>
+    </li>
+  </ul>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gabriel da Silva Machado. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Pequeno script para o menu mobile (funciona sem bibliotecas)
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('main-nav');
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+  </script>
+    <script>
+        lucide.createIcons();
+    </script>
 
 </body>
 </html>
