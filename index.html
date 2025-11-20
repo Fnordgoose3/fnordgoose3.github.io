@@ -43,57 +43,154 @@
 </section>
 
     <section id="portfolio" class="section">
-      <h2>Portfólio</h2>
-      <p>Aqui vão alguns projetos (jogos, sites e outros).</p>
-      <!-- Coloca cards ou listas de projetos aqui -->
-    </section>
+  <h2 data-pt="Portfólio" data-en="Portfolio" data-jp="ポートフォリオ">Portfólio</h2>
+  <p data-pt="Aqui vão alguns projetos (jogos, sites e outros)." data-en="Here are some projects (games, websites and others)." data-jp="ここにいくつかのプロジェクト（ゲーム、サイトなど）を載せます。">
+    Aqui vão alguns projetos (jogos, sites e outros).
+  </p>
+    <div class="projects-grid">
+  <article class="card">
+    <img src="../img/project1-thumb.png" alt="Screenshot do Projeto 1" class="card-img">
+    <div class="card-body">
+      <h3 class="card-title">Dungeon Runner</h3>
+      <p class="card-desc">Roguelike 2D criado no GameMaker com foco em salas e equipamentos fixos.</p>
+      <div class="card-tags">
+        <span>GameMaker</span><span>Pixel Art</span><span>GDD</span>
+      </div>
+      <div class="card-actions">
+        <a href="/projects/dungeon-runner" class="btn btn-outline" target="_blank" rel="noopener">Ver detalhes</a>
+        <a
+          class="btn btn-code cv-btn"
+          href="https://github.com/teu-usuario/dungeon-runner"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-pt="Código"
+          data-en="Code"
+          data-jp="コード"
+          data-href-pt="https://github.com/teu-usuario/dungeon-runner-pt"
+          data-href-en="https://github.com/teu-usuario/dungeon-runner-en"
+          data-href-jp="https://github.com/teu-usuario/dungeon-runner-jp">
+          <i class="icon-github"></i><span>Código</span>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="../img/project2-thumb.png" alt="Screenshot do Projeto 2" class="card-img">
+    <div class="card-body">
+      <h3 class="card-title">Site Portfólio</h3>
+      <p class="card-desc">Catálogo simples em HTML/CSS/JS com tema escuro e troca de idiomas.</p>
+      <div class="card-tags">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+      </div>
+      <div class="card-actions">
+        <a href="/projects/dungeon-runner" class="btn btn-outline" target="_blank" rel="noopener">Ver detalhes</a>
+
+      <a
+        class="btn btn-code cv-btn"
+        href="https://github.com/teu-usuario/dungeon-runner"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-pt="Código"
+        data-en="Code"
+        data-jp="コード"
+        data-href-pt="https://github.com/teu-usuario/dungeon-runner-pt"
+        data-href-en="https://github.com/teu-usuario/dungeon-runner-en"
+        data-href-jp="https://github.com/teu-usuario/dungeon-runner-jp">
+        <!-- se quiser ícone, mantenha aqui -->
+        <i class="icon-github"></i><span>Código</span>
+      </a>
+      </div>
+    </div>
+  </article>
+
+  <article class="card">
+  <img src="../img/project1-thumb.png" alt="Screenshot do Projeto 1" class="card-img">
+
+  <div class="card-body">
+    <h3 class="card-title" data-pt="Dungeon Runner" data-en="Dungeon Runner" data-jp="ダンジョンランナー">Dungeon Runner</h3>
+
+    <p class="card-desc" data-pt="Roguelike 2D..." data-en="2D roguelike..." data-jp="2Dローグライク...">
+      Roguelike 2D...
+    </p>
+
+    <div class="card-tags">
+      <span data-pt="GameMaker" data-en="GameMaker" data-jp="GameMaker">GameMaker</span>
+      <span data-pt="Pixel Art" data-en="Pixel Art" data-jp="ピクセルアート">Pixel Art</span>
+    </div>
+
+    <div class="card-actions">
+      <a href="/projects/dungeon-runner" class="btn btn-outline" target="_blank" rel="noopener">Ver detalhes</a>
+
+      <a
+        class="btn btn-code cv-btn"
+        href="https://github.com/teu-usuario/dungeon-runner"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-pt="Código"
+        data-en="Code"
+        data-jp="コード"
+        data-href-pt="https://github.com/teu-usuario/dungeon-runner-pt"
+        data-href-en="https://github.com/teu-usuario/dungeon-runner-en"
+        data-href-jp="https://github.com/teu-usuario/dungeon-runner-jp">
+        <!-- se quiser ícone, mantenha aqui -->
+        <i class="icon-github"></i><span>Código</span>
+      </a>
+    </div>
+  </div>
+</article>
+
+</div>
+  
+  <!-- cards... -->
+</section>
+
 
     <section id="sobre" class="section about-section">
   <div class="about-content">
-    <!-- Imagem (à esquerda em desktop). Use uma foto sua apontando para a direita (PNG ok). -->
-    <img src="../img/foto-apontando.png" alt="Gabriel apontando para a direita" class="about-img">
+    <img src="../img/gabrielpng1.png" alt="Gabriel apontando para a direita" class="about-img">
 
-    <!-- Texto e botão (à direita em desktop) -->
     <div class="about-text">
-      <h2>Sobre mim</h2>
-      <p>
-        Sou Gabriel Machado — estudante de programação e criador de jogos. 
-        Gosto de aprender fazendo e de transformar ideias em protótipos jogáveis.
+      <!-- h2 e p serão atualizados pelo lang.js usando texts (já incluso) -->
+      <h2 data-pt="Sobre mim" data-en="About me" data-jp="自己紹介">Sobre mim</h2>
+
+      <p data-pt="Sou Gabriel Machado — estudante de programação e criador de jogos. Gosto de aprender fazendo e de transformar ideias em protótipos jogáveis."
+         data-en="I'm Gabriel Machado — a programming student and game creator. I like learning by doing and turning ideas into playable prototypes."
+         data-jp="私はガブリエル・マシャードです。プログラミングを学び、ゲームを制作しています。アイデアをプレイできるプロトタイプに変えるのが好きです。">
+         Sou Gabriel Machado — estudante de programação e criador de jogos. Gosto de aprender fazendo e de transformar ideias em protótipos jogáveis.
       </p>
 
-      <!-- Botão que abre o PDF do currículo -->
-      <a href="../files/cv-gabriel.pdf" class="cv-btn" target="_blank" rel="noopener noreferrer">Veja meu currículo aqui</a>
+        <a href="/files/cv-gabriel-pt.pdf"
+          class="cv-btn"
+          data-pt="Veja meu currículo aqui"
+          data-en="See my resume here"
+          data-jp="履歴書を見る"
+          data-href-pt="/files/cv-gabriel-pt.pdf"
+          data-href-en="/files/cv-gabriel-en.pdf"
+          data-href-jp="/files/cv-gabriel-jp.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          download>
+          <i class="icon-pdf"></i><span>Veja meu currículo aqui</span>
+        </a>
     </div>
   </div>
 </section>
 
 
+
     <section id="contato" class="section">
-  <h2>Contato</h2>
-  <p>Entre em contato comigo:</p>
+  <h2 data-pt="Contato" data-en="Contact" data-jp="連絡先">Contato</h2>
+  <p data-pt="Entre em contato comigo:" data-en="Get in touch with me:" data-jp="ご連絡はこちらから：">Entre em contato comigo:</p>
+
   <ul class="contact-list">
-    <li>
-      <a href="mailto:Biel_machado08@hotmail.com">
-        <i data-lucide="mail"></i> E-mail
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/teu-usuario" target="_blank">
-        <i data-lucide="github"></i> GitHub
-      </a>
-    </li>
-    <li>
-      <a href="https://linkedin.com/in/teu-perfil" target="_blank">
-        <i data-lucide="linkedin"></i> LinkedIn
-      </a>
-    </li>
-    <li>
-      <a href="https://wa.me/5549991482378" target="_blank">
-        <i data-lucide="phone"></i> WhatsApp
-      </a>
-    </li>
+    <li><a href="mailto:Biel_machado08@hotmail.com" data-pt="E-mail" data-en="E-mail" data-jp="メール">E-mail</a></li>
+    <li><a href="https://github.com/Fnordgoose3" target="_blank" data-pt="GitHub" data-en="GitHub" data-jp="GitHub">GitHub</a></li>
+    <li><a href="https://linkedin.com/in/gabriel-da-silva-machado-4a64b6235" target="_blank" data-pt="LinkedIn" data-en="LinkedIn" data-jp="LinkedIn">LinkedIn</a></li>
+    <li><a href="https://wa.me/5549991482378" target="_blank" data-pt="WhatsApp" data-en="WhatsApp" data-jp="WhatsApp">WhatsApp</a></li>
   </ul>
 </section>
+
 
   </main>
 
@@ -115,6 +212,55 @@
     <script>
         lucide.createIcons();
     </script>
+
+  <a href="#"
+    id="back-to-top"
+    class="back-to-top"
+    aria-label="Voltar ao topo"
+    title="Voltar ao topo">
+    <!-- SVG seta para cima (leve e vetorial) -->
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M12 4.5c-.3 0-.5.1-.7.3l-6.5 6.5c-.4.4-.4 1 0 1.4.4.4 1 .4 1.4 0L12 7.9l5.8 5.8c.4.4 1 .4 1.4 0 .4-.4.4-1 0-1.4l-6.5-6.5c-.2-.2-.5-.3-.7-.3z"></path>
+    </svg>
+  </a>
+
+  <script>
+    // Back-to-top: mostra o botão ao rolar e faz scroll suave ao clicar
+    (function () {
+      const btn = document.getElementById('back-to-top');
+      if (!btn) return;
+
+      const showOffset = 260; // px scrolled before showing button
+
+      // mostra/esconde conforme rolagem
+      function onScroll() {
+        if (window.scrollY > showOffset) {
+          btn.classList.add('show');
+        } else {
+          btn.classList.remove('show');
+        }
+      }
+
+      // rolagem suave ao clicar
+      function onClick(e) {
+        e.preventDefault();
+        // Use comportamento suave nativo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Opcional: move o foco para o topo do documento para acessibilidade
+        const firstFocusable = document.querySelector('header a, header button, main h2');
+        if (firstFocusable) {
+          firstFocusable.focus({ preventScroll: true });
+        }
+      }
+
+      // liga eventos
+      window.addEventListener('scroll', onScroll, { passive: true });
+      btn.addEventListener('click', onClick);
+
+      // checa no carregamento (caso a página já abra abaixo do limite)
+      onScroll();
+    })();
+  </script>
 
 </body>
 </html>
